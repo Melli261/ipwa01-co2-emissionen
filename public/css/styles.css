@@ -1,0 +1,200 @@
+/* Grundlegende Stile für die gesamte Seite */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header-Stile */
+header {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Logo-Größe */
+.logo {
+    width: 226px; 
+    max-width: 100%;
+}
+
+/* Navigationsleiste */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #59AF3F;
+    padding: 10px 20px;
+    color: white;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.navbar a:hover, .navbar a.active {
+    text-decoration: underline;
+}
+
+/* Suchcontainer */
+.search-container {
+    display: flex;
+    margin-left: auto;
+}
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.search-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: #555;
+    color: white;
+}
+
+/* Lokale Navigation */
+.local-nav {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 175px;
+    left: 10px;
+}
+
+.local-nav-shifted {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 175px;
+    right: 10px; /* Verschiebe auf den rechten Rand */
+    left: auto;
+} 
+
+.local-nav button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 150px;
+}
+
+.local-nav button:hover {
+    background-color: rgba(89, 175, 63, 0.5);
+}
+
+/* Hauptinhalt */
+main {
+    padding: 20px;
+    margin-left: 150px;
+    padding-bottom: 60px;
+    margin-right: 150px;
+}
+/* Tabellenstile */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+/* Footer-Stile */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Pfeile für die Sortierung */
+th.sortable {
+    cursor: pointer;
+    position: relative;
+}
+th.sortable::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #555; /* Pfeil nach unten */
+}
+th.sortable.sorted-asc::after {
+    border-top: none;
+    border-bottom: 5px solid #555; /* Pfeil nach oben */
+}
+th.sortable.sorted-desc::after {
+    border-top: 5px solid #555; /* Pfeil nach unten */
+}
+
+/* Responsives Design */
+/* Stile für Bildschirme kleiner als 768px */
+@media (max-width: 768px) {
+
+    .logo {
+        width: 180px; 
+    }
+    h1 {
+        font-size: 2rem; /* Reduziert die Größe von h1 für kleinere Bildschirme */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduziert die Größe von h2 für kleinere Bildschirme */
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .local-nav {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+    }
+    main {
+        padding: 10px;
+        margin-left: 0; /* Keine seitlichen Margen für kleinere Bildschirme */
+        margin-right: 0; /* Keine seitlichen Margen für kleinere Bildschirme */
+    }
+}
+
+/* Stile für Bildschirme kleiner als 480px */
+@media (max-width: 480px) {
+    .logo {
+        width: 120px;
+    }
+    h1 {
+        font-size: 1.5rem; /* Weiteres Reduzieren der Größe von h1 für sehr kleine Bildschirme */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Weiteres Reduzieren der Größe von h2 für sehr kleine Bildschirme */
+    }
+
+}

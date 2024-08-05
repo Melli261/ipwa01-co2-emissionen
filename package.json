@@ -1,0 +1,23 @@
+{
+    "name": "vue-emissions-app",
+    "version": "1.0.0",
+    "description": "Eine Vue.js-Anwendung zur Anzeige von CO2-Emissionen",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "vue": "^2.6.14",
+      "vue-template-compiler": "^2.6.14"
+    },
+    "devDependencies": {
+      "vite": "^2.9.0",
+      "vite-plugin-vue2": "^1.9.3"
+    },
+    "author": "",
+    "license": "MIT",
+    "engines": {
+      "node": ">=14.0.0"
+    }
+  }

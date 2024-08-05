@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2-Emissionen</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div id="app">
+        <!-- Header mit Logo -->
+        <header>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </a>
+        </header>
+        <!-- Navigationsleiste -->
+        <nav class="navbar">
+            <a href="index.html">Hauptseite</a>
+            <a href="#" class="active">CO2-Emissionen</a>
+            <div class="search-container">
+                <input type="text" v-model="searchQuery" placeholder="Suche...">
+                <button @click="search">Suchen</button>
+            </div>
+        </nav>
+        <!-- Lokale Navigation -->
+        <nav class="local-nav">
+            <button @click="showTable('laender')">Länder</button>
+            <button @click="showTable('unternehmen')">Unternehmen</button>
+        </nav>
+        <!-- Hauptinhalt mit Tabellen -->
+        <main>
+            <div v-if="currentTable === 'laender'">
+                <h1>CO2-Emissionen nach Ländern</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- Sortierfunktionen für Laender-Tabelle -->
+                            <th @click="sortTable('laender', 'jahr')" class="sortable" :class="{ 'sorted-asc': sortKey === 'jahr' && sortOrder === 1, 'sorted-desc': sortKey === 'jahr' && sortOrder === -1 }">Jahr</th>
+                            <th @click="sortTable('laender', 'emissionen')" class="sortable" :class="{ 'sorted-asc': sortKey === 'emissionen' && sortOrder === 1, 'sorted-desc': sortKey === 'emissionen' && sortOrder === -1 }">CO2-Ausstoß (in Mio Tonnen)</th>
+                            <th @click="sortTable('laender', 'land')" class="sortable" :class="{ 'sorted-asc': sortKey === 'land' && sortOrder === 1, 'sorted-desc': sortKey === 'land' && sortOrder === -1 }">Land</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in filteredLaenderData" :key="item.jahr + item.land">
+                            <td>{{ item.jahr }}</td>
+                            <td>{{ item.emissionen }}</td>
+                            <td>{{ item.land }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div v-else>
+                <h1>CO2-Emissionen nach Energieunternehmen (2009)</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- Sortierfunktionen für Unternehmens-Tabelle -->
+                            <th @click="sortTable('unternehmen', 'rang')" class="sortable" :class="{ 'sorted-asc': sortKey === 'rang' && sortOrder === 1, 'sorted-desc': sortKey === 'rang' && sortOrder === -1 }">Rang</th>
+                            <th @click="sortTable('unternehmen', 'emissionen')" class="sortable" :class="{ 'sorted-asc': sortKey === 'emissionen' && sortOrder === 1, 'sorted-desc': sortKey === 'emissionen' && sortOrder === -1 }">CO2-Ausstoß (in Mio Tonnen)</th>
+                            <th @click="sortTable('unternehmen', 'unternehmen')" class="sortable" :class="{ 'sorted-asc': sortKey === 'unternehmen' && sortOrder === 1, 'sorted-desc': sortKey === 'unternehmen' && sortOrder === -1 }">Unternehmen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in filteredUnternehmenData" :key="item.rang + item.unternehmen">
+                            <td>{{ item.rang }}</td>
+                            <td>{{ item.emissionen }}</td>
+                            <td>{{ item.unternehmen }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- Footer mit Links zu rechtlichen Hinweisen -->
+        <footer>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </footer>
+    </div>
+    <!-- Verlinkung zur externen JavaScript-Datei -->
+    <script src="js/app.js"></script>
+    <script>
+        // Holt die Sprache des Nutzers aus dem Browser
+        const userLang = (navigator.language || navigator.userLanguage).toLowerCase();
+
+        // Liste von Sprach-Codes
+        const targetLanguages = [
+            'ar',     // Arabic
+            'ro',     // Hanifi Rohingya
+            'he',     // Hebrew
+            'mand',   // Mandaic
+            'mkk',    // Mende Kikaui
+            'nko',    // N'Ko
+            'hu',     // Old Hungarian
+            'sam',    // Samaritan
+            'syc',    // Syriac
+            'dv',     // Thaana
+            'yez'     // Yezidi
+        ];
+
+        // Überprüft, ob die Sprache in der Liste der Zielsprachen enthalten ist
+        if (targetLanguages.some(lang => userLang.startsWith(lang))) {
+            // Fügt die Klasse hinzu, um die .local-nav nach rechts zu verschieben
+            document.querySelector('.local-nav').classList.add('local-nav-shifted');
+        }
+    </script>
+</body>
+</html>

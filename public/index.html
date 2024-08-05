@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPWA01-01</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header mit Logo -->
+        <header>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </a>
+        </header>
+        
+        <!-- Navigationsleiste mit Suchfunktion -->
+        <nav class="navbar">
+            <a href="" class="active">Hauptseite</a>
+            <a href="emissionen.html">CO2-Emissionen</a>
+            <div class="search-container">
+                <input type="text" v-model="searchQuery" placeholder="Suche...">
+                <button @click="search">Suchen</button>
+            </div>
+        </nav>
+
+        <!-- Hauptinhalt der Seite mit Infos zum Projekt -->
+        <main>
+            <h1>IPWA01-01 - Programmierung von Webanwendungsoberflächen</h1>
+            <h2>Aufgabenstellung 1: CO2-Footprint</h2>
+            <p>Diese Website ist Teil eines Studienprojekts, das sich mit dem Klimawandel und der Transparenz von CO2-Emissionen beschäftigt.<br>
+            Im Rahmen dieses Projekts habe ich eine Plattform entwickelt, um öffentlich zugänglich Informationen über die jährlichen CO2-Emissionen von Unternehmen und Ländern bereitzustellen.</p>
+            <p>Für weitere Informationen oder zur Einsichtnahme des Code-Repositories besuchen Sie bitte 
+                <a href="https://github.com/Melli261/ipwa01-co2-emissionen" target="_blank" class="github-link">dieses GitHub-Repository</a>.</p>
+        </main>
+
+        <!-- Footer mit Links zu rechtlichen Hinweisen -->
+        <footer>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </footer>
+    </div>
+    <!-- Verlinkung zur externen JavaScript-Datei -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
