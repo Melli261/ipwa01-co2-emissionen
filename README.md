@@ -29,6 +29,9 @@ Klone das Repository auf deinen lokalen Rechner.
 
 3. Sobald du im richtigen Verzeichnis bist, kannst du den Server starten: python -m http.server 8080
 
+4. Website im Browser ansehen:
+   Über http://localhost:8080/index.html kannst du die Seite ansehen.
+
 
 ### Option 2
 #### Voraussetzungen
