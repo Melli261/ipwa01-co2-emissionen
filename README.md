@@ -13,13 +13,31 @@ Dies ist ein Projekt zur Visualisierung von CO2-Emissionen für Unternehmen und 
 
 ## Installation
 
+### Option 1
 ### Voraussetzungen
-
-Stelle sicher, dass [Node.js](https://nodejs.org/) und [Git](https://git-scm.com/) auf deinem Computer installiert sind. Außerdem wird Visual Studio Code (VS Code) benötigt.
+Stelle sicher, dass eine Version von Python auf deinem Computer installiert ist.
 
 ### Projekt klonen
 
-Klonen Sie das Repository auf Ihren lokalen Rechner
+Klone das Repository auf deinen lokalen Rechner.
+
+### Nutzung mit Python HTTP Server auf Windows
+
+1. Öffne die Windows Eingabeaufforderung
+
+2. Navigiere mit cd zum Verzeichnis mit den Dateien
+
+3. Sobald du im richtigen Verzeichnis bist, kannst du den Server starten: python -m http.server 8080
+
+
+## Option 2
+## Voraussetzungen
+
+Stelle sicher, dass Visual Studio Code (VS Code) auf deinem Computer installiert ist.  
+
+### Projekt klonen
+
+Klone das Repository auf deinen lokalen Rechner
 
 ### Nutzung mit Live Server in VS Code
 
@@ -28,7 +46,7 @@ Klonen Sie das Repository auf Ihren lokalen Rechner
 2. Installiere die Extensions Vue-Official und Live Server
 
 3. Projekt öffnen:
-   Öffne VS Code und wähle Datei > Ordner öffnen (oder drücke Ctrl+O). Navigiere zum Verzeichnis des geklonten Projekts ipwa01-co2-emissionene und öffne es.
+   Öffne VS Code und wähle Datei > Ordner öffnen (oder drücke Ctrl+O). Navigiere zum Verzeichnis des geklonten Projekts ipwa01-co2-emissionen und öffne es.
 
 4. Live Server starten:
    Öffne die Datei 'index.html' und drücke irgendwo Rechtsklick und wähle 'open with live server'.
