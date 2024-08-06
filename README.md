@@ -13,8 +13,8 @@ Dies ist ein Projekt zur Visualisierung von CO2-Emissionen für Unternehmen und 
 
 ## Installation
 
-### Option 1
-### Voraussetzungen
+## Option 1
+## Voraussetzungen
 Stelle sicher, dass eine Version von Python auf deinem Computer installiert ist.
 
 ### Projekt klonen
