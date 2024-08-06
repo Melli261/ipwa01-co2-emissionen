@@ -13,8 +13,8 @@ Dies ist ein Projekt zur Visualisierung von CO2-Emissionen für Unternehmen und 
 
 ## Installation
 
-## Option 1
-## Voraussetzungen
+### Option 1
+##### Voraussetzungen
 Stelle sicher, dass eine Version von Python auf deinem Computer installiert ist.
 
 ### Projekt klonen
@@ -30,8 +30,8 @@ Klone das Repository auf deinen lokalen Rechner.
 3. Sobald du im richtigen Verzeichnis bist, kannst du den Server starten: python -m http.server 8080
 
 
-## Option 2
-## Voraussetzungen
+### Option 2
+##### Voraussetzungen
 
 Stelle sicher, dass Visual Studio Code (VS Code) auf deinem Computer installiert ist.  
 
