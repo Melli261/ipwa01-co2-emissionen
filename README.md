@@ -34,4 +34,4 @@ Klonen Sie das Repository auf Ihren lokalen Rechner
    Öffne die Datei 'index.html' und drücke irgendwo Rechtsklick und wähle 'open with live server'.
 
 5. Website im Browser ansehen:
-   Der Standardbrowser öffnet sich und sollte auf der lokalen Adresse 'http://127.0.0.1:5500/public/emissionen.html' die Seite anzeigen. Änderungen an den Dateien werden automatisch im Browser aktualisiert."# ipwa01-co2-emissionen" 
+   Der Standardbrowser öffnet sich und sollte auf der lokalen Adresse 'http://127.0.0.1:5500/public/emissionen.html' die Seite anzeigen. Änderungen an den Dateien werden automatisch im Browser aktualisiert.
