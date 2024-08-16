@@ -25,7 +25,7 @@ Klone das Repository auf deinen lokalen Rechner.
 
 1. Öffne die Windows Eingabeaufforderung
 
-2. Navigiere mit cd zum Verzeichnis mit den Dateien
+2. Navigiere mit cd zum Verzeichnis mit den Dateien (...\co2-emissionen\public)
 
 3. Sobald du im richtigen Verzeichnis bist, kannst du den Server starten: python -m http.server 8080
 
